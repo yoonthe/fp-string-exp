@@ -1,0 +1,23 @@
+{
+  "name": "fp-string-exp",
+  "version": "0.0.1",
+  "description": "string-exp executor based on fp",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "coverage": "jest --coverage"
+  },
+  "keywords": [
+    "string-exp",
+    "fp"
+  ],
+  "noI18nCli": true,
+  "author": "Yoonthe",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.15"
+  },
+  "devDependencies": {
+    "jest": "^25.4.0"
+  }
+}
