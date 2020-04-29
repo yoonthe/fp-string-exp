@@ -22,7 +22,7 @@ const generate = (funs, pipeSymbol = '|>') => {
     const [, fnname, hasArg , args] = execs;
     if (fnname in fns) {
       if (hasArg) {
-        return fns[fnname](...(args.split(',').map(t => JSON.parse(t.trim().replace(/'/g, '"')))));
+        return fns[fnname](...JSON.parse(`[${args.replace(/'/g, '"')}]`));
       }
       return fns[fnname];
     }
