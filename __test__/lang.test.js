@@ -15,4 +15,16 @@ describe('fp(langFns+objFns)', () => {
       }
     );
   });
+  describe('flow(\'prop(\'value\')|>equal(1)\')', () => {
+    const executor = flow('prop(\'value\')|>equal(1)');
+    test.each([
+      [{ value: 123 }, false],
+      [[], false],
+      [{ value: 1 }, true]])(
+      '%p => split- => join_ => %s',
+      (input, expected) => {
+        expect(executor(input)).toBe(expected);
+      }
+    );
+  });
 });
